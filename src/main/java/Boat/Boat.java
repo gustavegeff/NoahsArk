@@ -1,4 +1,7 @@
+package Boat;
+
 import Tool.Tool;
+import Animals.*;
 
 import java.util.Scanner;
 import java.util.Vector;

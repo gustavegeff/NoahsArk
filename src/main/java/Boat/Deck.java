@@ -1,3 +1,5 @@
+package Boat;
+
 import java.util.HashSet;
 
 public class Deck {

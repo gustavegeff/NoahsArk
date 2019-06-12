@@ -1,3 +1,6 @@
+package Boat;
+
+import Animals.*;
 import java.util.Vector;
 
 public class Room {

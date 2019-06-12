@@ -1,3 +1,5 @@
+import Boat.Boat;
+
 import java.util.Scanner;
 
 public class Main {

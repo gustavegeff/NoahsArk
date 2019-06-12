@@ -1,8 +1,8 @@
 package Animals;
 
-public class Apes extends Mammal implements Carnivourous, Herbivorous {
+public class Ape extends Mammal implements Carnivourous, Herbivorous {
 
-    public Apes(int size) {
+    public Ape(int size) {
         super(size);
     }
 
