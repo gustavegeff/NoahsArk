@@ -1,6 +1,9 @@
+package Animals;
+
 public abstract class Animal {
     private int size;
     private int weight;
+    private String species;
 
     public Animal(int size) {
         this.size = size;
@@ -20,5 +23,13 @@ public abstract class Animal {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
     }
 }

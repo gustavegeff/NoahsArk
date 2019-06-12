@@ -10,6 +10,7 @@ public class Deck {
         this.roomList = new HashSet<>();
     }
 
+    //get the total occupancy of the deck by adding all room occupancies
     public int getDeckOccupancy()
     {
         int tot = 0;
