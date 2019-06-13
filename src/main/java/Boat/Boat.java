@@ -48,9 +48,51 @@ public class Boat {
 
 
     public void fill(Vector<Animal> animalList) {
-        animalList = animalList;
-        return;
+        double average = computeAverageWeight(animalList);
+
+        for (Animal a : animalList)
+        {
+            Room r = findBestRoom(a);
+            placeInRoom(a,r);
+        }
     }
+    double computeAverageWeight(Vector<Animal> animalList){
+        double totWeight = 0;
+        int count = 0;
+        for (Animal a : animalList)
+        {
+            totWeight += a.getWeight();
+            count++;
+        }
+        if (count == 0)
+            return 0;
+        return totWeight/count;
+    }
+
+    private Room findBestRoom(Animal a)
+    {
+        //return the room who fits best for the animal
+        //traverse all the boat and stop when a room as a size just bigger or fits or is bigger than twice the average
+        //size if there is not incompatibility (predators, prey...)
+
+        for (Deck d : this.deckList)
+        {
+            if (d.getDeckOccupancy() == 100)
+                continue;
+            for (Room r : d.getRoomList()){
+                if (r.getRoomFillingPercentage() == 100)
+                    continue;
+                if (r.isRoomSuitable(a))
+                    return r;
+            }
+        }
+        return null;
+    }
+
+    boolean placeInRoom(Animal a, Room r){
+        return false;
+    }
+
 
     public Vector<Deck> getDeckList() {
         return deckList;
