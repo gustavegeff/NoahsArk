@@ -10,7 +10,10 @@ public class Ruminantia extends Mammal implements Herbivorous {
     @Override
     public void runFrom(Animal a)
     {
-        System.out.println("oh no a " + a.getSpecies() + " is chasing me");
+        if (this.getSize() < a.getSize())
+            System.out.println("oh no a " + a.getSpecies() + " is chasing me");
+        else
+            System.out.println("a " + a.getSpecies() + " this small can't eat me");
     }
     @Override
     public void eat() {

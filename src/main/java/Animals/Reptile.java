@@ -12,7 +12,10 @@ public abstract class Reptile extends Animal implements Carnivourous {
     }
 
     public void eat(Animal a){
-        System.out.println("pssss " + a.getSpecies());
+        if (this.getSize() > a.getSize())
+            System.out.println("psss yum a " + a.getSpecies());
+        else
+            System.out.println("I can't eat a " + a.getSpecies() + " this big");
     }
 
     public void hunt(){

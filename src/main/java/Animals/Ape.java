@@ -10,11 +10,17 @@ public class Ape extends Mammal implements Carnivourous, Herbivorous {
 
     @Override
     public void eat(Animal a){
-        System.out.println("croc croc " + a.getSpecies());
+        if (this.getSize() > a.getSize())
+            System.out.println("croc croc " + a.getSpecies());
+        else
+            System.out.println("I can't eat a " + a.getSpecies() + " this big");
     }
     @Override
     public void runFrom(Animal a) {
-        System.out.println("oh no a " + a.getSpecies() + " is chasing me");
+        if (this.getSize() < a.getSize())
+            System.out.println("oh no a " + a.getSpecies() + " is chasing me");
+        else
+            System.out.println("a " + a.getSpecies() + " this small can't eat me");
     }
     @Override
     public void eat() {

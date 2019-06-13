@@ -10,7 +10,10 @@ public class Feline extends Mammal implements Carnivourous {
 
     @Override
     public void eat(Animal a){
-        System.out.println("croc croc a " + a.getSpecies());
+        if (this.getSize() > a.getSize())
+            System.out.println("croc croc " + a.getSpecies());
+        else
+            System.out.println("I can't eat a " + a.getSpecies() + " this big");
     }
     @Override
     public void hunt(){

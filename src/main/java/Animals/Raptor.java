@@ -10,7 +10,10 @@ public class Raptor extends Bird implements Carnivourous {
 
     @Override
     public void eat(Animal a){
-        System.out.println("arrr arrrr plunging toward a " + a.getSpecies());
+        if (this.getSize() > a.getSize())
+            System.out.println("arrr arrr plungin toward a " + a.getSpecies());
+        else
+            System.out.println("I can't eat a " + a.getSpecies() + " this big");
     }
     @Override
     public void hunt(){
