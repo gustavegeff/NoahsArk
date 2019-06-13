@@ -1,7 +1,7 @@
 package Animals;
 
 public abstract class Bird extends Animal {
-    public Bird(int size) {
+    public Bird(double size) {
         super(size);
     }
 

@@ -1,27 +1,39 @@
 package Animals;
 
 public abstract class Animal {
-    private int size;
-    private int weight;
+    private double size;
+    private double weight;
     private String species;
 
-    public Animal(int size) {
+    public Animal(double size) {
         this.size = size;
     }
 
-    public int getSize() {
+    public void whatAmI(){
+        System.out.println("I am a " + getSpecies() + " from the " + this.getClass().getSimpleName() + " family.");
+    };
+
+    public boolean isCarnivorous(){
+        if (this.getClass().isAssignableFrom(Feline.class) || this.getClass().isAssignableFrom(Crocodilians.class)
+                || this.getClass().isAssignableFrom(Raptor.class) || this.getClass().isAssignableFrom(Serpentes.class)
+                || this.getClass().isAssignableFrom(Ape.class))
+            return true;
+        return false;
+    }
+
+    public double getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(double size) {
         this.size = size;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 

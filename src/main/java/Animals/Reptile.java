@@ -2,13 +2,13 @@ package Animals;
 
 public abstract class Reptile extends Animal implements Carnivourous {
 
-    public Reptile(int size) {
+    public Reptile(double size) {
         super(size);
     }
 
-    public void fly()
+    public void swim()
     {
-        System.out.println("I'm flying");
+        System.out.println("I'm swimming");
     }
 
     public void eat(Animal a){
