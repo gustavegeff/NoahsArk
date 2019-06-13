@@ -1,6 +1,6 @@
 package Animals;
 
-public class Granivorous extends Mammal implements Herbivorous {
+public class Granivorous extends Bird implements Herbivorous {
 
     public Granivorous(double size, String species) {
         super(size);
