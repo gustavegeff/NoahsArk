@@ -16,6 +16,10 @@ etc...
 My implementation is a best fit with retro-traversal.
 You can see it as a Malloc (in C) implementation.
 
+You can note that almost everything in this project
+in regard of science is pretty accurate (size/weight ration,
+names of classes, ...)
+
 ## Author
 
 Gustave Geffroy.
