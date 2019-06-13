@@ -48,15 +48,16 @@ public class Boat {
 
 
     public void fill(Vector<Animal> animalList) {
-        double average = computeAverageWeight(animalList);
+        //double average = computeAverageWeight(animalList);
 
         for (Animal a : animalList)
         {
             Room r = findBestRoom(a);
-            placeInRoom(a,r);
+            if (r != null)
+                r.getAnimalList().add(a);
         }
     }
-    double computeAverageWeight(Vector<Animal> animalList){
+    private double computeAverageWeight(Vector<Animal> animalList){
         double totWeight = 0;
         int count = 0;
         for (Animal a : animalList)
@@ -88,11 +89,6 @@ public class Boat {
         }
         return null;
     }
-
-    boolean placeInRoom(Animal a, Room r){
-        return false;
-    }
-
 
     public Vector<Deck> getDeckList() {
         return deckList;

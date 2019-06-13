@@ -5,7 +5,6 @@ import java.util.Vector;
 
 public class Room {
     private int capacity;
-    private int nbOfAnimals;
     private int maxWeight;
     private Vector<Animal> animalList;
 
@@ -85,13 +84,6 @@ public class Room {
         this.capacity = capacity;
     }
 
-    public int getNbOfAnimals() {
-        return nbOfAnimals;
-    }
-
-    public void setNbOfAnimals(int nbOfAnimals) {
-        this.nbOfAnimals = nbOfAnimals;
-    }
 
     public int getFullWeight() {
         return maxWeight;
